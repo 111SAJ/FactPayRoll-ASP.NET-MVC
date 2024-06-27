@@ -1,0 +1,93 @@
+﻿@model smartTechAuthenticator.ViewModels.PlansViewModel
+@{
+    ViewBag.Title = "ViewPlan";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<style>
+    .plan_table.product_description table {
+        border: 1px solid #ccc;
+        margin: 50px 0;
+    }
+
+        .plan_table.product_description table th {
+            font-weight: bold;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        .plan_table.product_description table td {
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+
+</style>
+
+<div class="page-breadcrumb">
+    <div class="row">
+        <div class="col-12 d-flex no-block align-items-center">
+            <h4 class="page-title"> Plan </h4>
+            <div class="ms-auto text-end">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href=@Url.Action("Index","Plans")>Manage Plans</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            Plan
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="row">
+                    @*<div class="col-md-6">
+                            <div class="left-column">
+                                <img data-image="red" class="active" src="~/Content/Product/@Model.Photo" alt="" style="padding: 40px; width: 100%;">
+                            </div>
+                        </div>*@
+
+                    <div class="col-md-6 mx-auto">
+                        <div class="right-column">
+                            <div class="plan_table product_description">
+                                @*<h6><span>Plan Name :- </span></h6>   <span>@Model.PlanName</span> <br />
+                                <h6><span> Price  :- </span></h6>  <p>@Model.Price</p>
+                                <h6><span> Validity:-</span></h6>  <span>@Model.Validity</span><br />*@
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Plan Name</th>
+                                            <th>Price</th>
+                                            <th>Validity</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>@Model.PlanName</td>
+                                            <td>@Model.Price</td>
+                                            <td>@Model.Validity</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
